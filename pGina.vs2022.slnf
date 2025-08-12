@@ -1,0 +1,14 @@
+{
+  "solution": {
+    "path": "pGina/src/pGina-3.x.sln",
+    "projects": [
+      "Plugins/Core/LocalMachine/LocalMachine.csproj",
+      "Plugins/Core/MySQLAuth/MySQLAuth/MySQLAuth.csproj",
+      "Plugins/Core/MySQLLogger/MySQLLogger/MySQLLogger.csproj",
+      "pGina/src/Configuration/Configuration.csproj",
+      "pGina/src/CredentialProvider/CredentialProvider.vcxproj",
+      "pGina/src/CredentialProviderRegistration/CredentialProviderRegistration.csproj",
+      "pGina/src/Service/Service/Service.csproj"
+    ]
+  }
+}
