@@ -28,7 +28,14 @@ namespace pGina.Plugin.MySQLAuth
             bldr.Password = Settings.Store.GetEncryptedSetting("Password");
             bool useSsl = Settings.Store.UseSsl;
             if (useSsl)
-                bldr.SslMode = MySqlSslMode.Required;
+            {
+                bldr.SslMode = MySqlSslMode.Required; // Puedes usar VerifyCA con tu CA
+                // bldr.TrustServerCertificate = true; // Solo pruebas
+            }
+            else
+            {
+                bldr.AllowPublicKeyRetrieval = true; // MySQL 8 sin TLS
+            }
 
             m_conn = new MySqlConnection(bldr.GetConnectionString(true));
             if( m_conn != null ) m_conn.Open();
